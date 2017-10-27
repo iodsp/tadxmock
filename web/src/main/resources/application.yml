@@ -1,0 +1,41 @@
+debug: true
+
+logging:
+  level:
+    root: DEBUG
+
+server:
+  port: 9991
+
+security:
+  session: always
+  user:
+    password: none
+  oauth2:
+    client:
+      accessTokenUri: http://uaa.iodsp.org/oauth/token
+      userAuthorizationUri: http://uaa.iodsp.org/oauth/authorize
+      clientId: webapp
+      preEstablishedRedirectUri: http://localhost:9991/login
+      registeredRedirectUri: http://localhost:9991/login
+      useCurrentUri: false
+      client-secret: $2a$10$xg0yHvQ44Ssv8iQTLXXeUuzAUWkhyibYsSVrnP3pfYAmAK44bvsqO
+
+    resource:
+      filter-order: 3
+      jwt:
+        keyValue:
+          -----BEGIN PUBLIC KEY-----
+          MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAo7rgJ63fGFmfWb6docxKKwc//eh+tIdP9CCUXmhmZdM3bmBmUBZoCAvly0/Men0bPMwX381jEN0BdMCoV9VHKvN+GPrFFTPXiZf1HpgwgvkHAHArGqNZ+LDgrEq/0gFJZiJgNrBillvEo/FXGTghFGbg6TTMjHScpzmEHQH6oZGmWcfhJ4LfyKk0+eUMlVkOQ0MGONXPjNulqjrBe6V1GaWy+fGu90spZvjUwvyi/jayljWb8sAobQkNFWhNgqP4S8s7o2Y2ZOSh52gOvDl5G5Oh6SSCf64dSXIb3+GQwVOLA+CVfpaR7a+/PhAI94rFcpwShNU6sYFmrzo6OcnGdwIDAQAB
+          -----END PUBLIC KEY-----
+
+spring:
+  jackson:
+    serialization:
+      write_dates_as_timestamps: false
+
+
+reset:
+  resource:
+    url: http://localhost:9992
+

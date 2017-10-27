@@ -1,0 +1,21 @@
+debug: true
+
+logging:
+  level:
+    root: INFO
+
+server:
+  port: 9990
+
+security:
+  sessions: stateless
+  user:
+    password: none
+  basic:
+    enabled: false
+  oauth2:
+    client:
+      accessTokenUri: http://uaa.iodsp.org/oauth/token
+      userAuthorizationUri: http://uaa.iodsp.org/oauth/authorize
+      clientId: webapp
+      clientSecret: $2a$10$xg0yHvQ44Ssv8iQTLXXeUuzAUWkhyibYsSVrnP3pfYAmAK44bvsqO

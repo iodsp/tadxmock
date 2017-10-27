@@ -1,0 +1,38 @@
+debug: true
+
+logging:
+  level:
+    root: DEBUG
+
+server:
+  port: 9992
+
+security:
+  oauth2:
+    resource:
+      filter-order: 3
+      jwt:
+        keyValue:
+          -----BEGIN PUBLIC KEY-----
+          MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAo7rgJ63fGFmfWb6docxKKwc//eh+tIdP9CCUXmhmZdM3bmBmUBZoCAvly0/Men0bPMwX381jEN0BdMCoV9VHKvN+GPrFFTPXiZf1HpgwgvkHAHArGqNZ+LDgrEq/0gFJZiJgNrBillvEo/FXGTghFGbg6TTMjHScpzmEHQH6oZGmWcfhJ4LfyKk0+eUMlVkOQ0MGONXPjNulqjrBe6V1GaWy+fGu90spZvjUwvyi/jayljWb8sAobQkNFWhNgqP4S8s7o2Y2ZOSh52gOvDl5G5Oh6SSCf64dSXIb3+GQwVOLA+CVfpaR7a+/PhAI94rFcpwShNU6sYFmrzo6OcnGdwIDAQAB
+          -----END PUBLIC KEY-----
+
+spring:
+  datasource:
+    driver-class-name: org.h2.Driver
+   # url: jdbc:h2:file:/Users/zhongxiuhao/code/iodsp/mbdb
+    url: jdbc:h2:mem:test
+    data: classpath:db/h2_data.sql
+    schema: classpath:db/h2_schema.sql
+    username: root
+    password: 123456
+  h2:
+    console:
+      path: /h2-console
+      enabled: true
+      settings:
+        web-allow-others: true
+  jackson:
+    serialization:
+      write_dates_as_timestamps: false
+

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/api/api.iml" filepath="$PROJECT_DIR$/api/api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tadxmock.iml" filepath="$PROJECT_DIR$/tadxmock.iml" />
+      <module fileurl="file://$PROJECT_DIR$/resource/tadxmock-resource.iml" filepath="$PROJECT_DIR$/resource/tadxmock-resource.iml" />
+      <module fileurl="file://$PROJECT_DIR$/web/web.iml" filepath="$PROJECT_DIR$/web/web.iml" />
+    </modules>
+  </component>
+</project>
